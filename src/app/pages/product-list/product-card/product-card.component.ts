@@ -41,7 +41,7 @@ import { CartService } from '../../../services/cart.service';
   `
 })
 export class ProductCardComponent {
-   product= input.required<Product>();
+   product= input.required<Product>();  // @input product:Product;
 
    cartService=inject(CartService);
 }
