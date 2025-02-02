@@ -18,6 +18,6 @@ export class PrimaryButtonComponent {
    btnClicked= output();
   handleButtonClick(){
     console.log('btn clicked');
-    return    this.btnClicked.emit();
+    return this.btnClicked.emit();
   }
 }
