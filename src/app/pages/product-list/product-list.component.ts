@@ -10,8 +10,32 @@ import { ProductCardComponent } from './product-card/product-card.component';
     <app-product-card [product]="product"/>
   }
  </div>
+
+  <!-- <div class="parent">
+    <div class="child">
+         font size should change
+    </div>
+    <div class="secondchild">
+      helloworld
+    </div>
+  </div> -->
   `,
-  styles: ``
+  styles: `
+  // .parent{
+  //    font-size:1.23vw;
+  // }
+  // .child{
+  //   font-size:3em;
+  //   margin-bottom:3em;
+  //   background-color:yellow;
+  // }
+  // .secondchild{
+  //   background-color:red;
+  //   padding:1em;
+  // }
+  
+  
+  `
 })
 export class ProductListComponent {
 products=signal<Product[]>([
