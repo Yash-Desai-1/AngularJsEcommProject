@@ -12,28 +12,28 @@ import { CartService } from '../../../services/cart.service';
     >
       <div class="mx-auto">
         <img
-          [src]="product().image"
+          [src]="productOfProductCard().image"
           class="w-[200px] h-[100px] object-contain"
         />
       </div>
       <div class="flex flex-col">
-        <span class="text-md font-bold">{{ product().title }}</span>
-        <span class="text-sm"> {{ '$' + product().price }}</span>
+        <span class="text-md font-bold">{{ productOfProductCard().title }}</span>
+        <span class="text-sm"> {{ '$' + productOfProductCard().price }}</span>
         <app-primary-button
           
           class="mt-3"
           label="Add to Cart"
-          (btnClicked)="cartService.addToCart(product())" 
+          (btnClicked)="cartService.addToCart(productOfProductCard())" 
           
         />
       </div>
 
       <span
         class="absolute top-2 right-3 text-sm font-bold"
-        [class]="product().stock ? 'text-green-500' : 'text-red-500'"
+        [class]="productOfProductCard().stock ? 'text-green-500' : 'text-red-500'"
       >
-        @if (product().stock) {
-        {{ product().stock }} left } @else { Out of stock }
+        @if (productOfProductCard().stock) {
+        {{ productOfProductCard().stock }} left } @else { Out of stock }
       </span>
     </div>
   `,
@@ -41,7 +41,7 @@ import { CartService } from '../../../services/cart.service';
   `
 })
 export class ProductCardComponent {
-   product= input.required<Product>();
+   productOfProductCard= input.required<Product>();  // @input product:Product;
 
    cartService=inject(CartService);
 }

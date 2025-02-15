@@ -7,7 +7,7 @@ import { CartService } from '../../services/cart.service';
   template: `
     <div class="bg-slate-100 px-4 shadow-md py-3 flex justify-between items-center">
       <span class="text-xl">My Store</span>
-      <app-primary-button [label]="'Cart (' + cartService.cart().length + ')'" (btnClicked)="showButtonClicked()"/>
+      <app-primary-button [label]="'Cart (' + cartService.cart().length + ')'" />
     </div>
   `,
   styles: ``
@@ -17,9 +17,9 @@ export class HeaderComponent {
    buttonName: string="Add to Cart";
    cart =signal("Cart");
   // output event
-  showButtonClicked() {
-    console.log('button was clicked');
-}
+//   showButtonClicked() {
+//     console.log('button was clicked');
+// }
 
   cartService=inject(CartService);
 
