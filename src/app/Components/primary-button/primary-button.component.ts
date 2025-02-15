@@ -17,7 +17,7 @@ export class PrimaryButtonComponent {
 
    btnClicked= output(); // @Output btnclicked= newevent.emit();
   handleButtonClick(){
-    console.log('btn clicked');
+    // console.log('btn clicked');
     return this.btnClicked.emit();
   }
 }
