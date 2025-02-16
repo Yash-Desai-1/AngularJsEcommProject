@@ -70,4 +70,13 @@ products=signal<Product[]>([
     stock: 7,
   }
 ])
+
+ async ngOnInit(){
+      const res= await fetch('https://fakestoreapi.com/products');
+      const data= await res.json();
+      this.products.set(data);
+ }
+      
+
+
 }
