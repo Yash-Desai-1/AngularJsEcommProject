@@ -28,13 +28,13 @@ import { CartService } from '../../../services/cart.service';
         />
       </div>
 
-      <span
+      <!-- <span
         class="absolute top-2 right-3 text-sm font-bold"
         [class]="productOfProductCard().stock ? 'text-green-500' : 'text-red-500'"
       >
         @if (productOfProductCard().stock) {
         {{ productOfProductCard().stock }} left } @else { Out of stock }
-      </span>
+      </span> -->
     </div>
   `,
   styles: `
